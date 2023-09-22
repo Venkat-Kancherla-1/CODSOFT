@@ -1,0 +1,486 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    background-color: #3F72AF;
+}
+
+.header{
+    padding:1vh;
+    background-color: #3F72AF;
+    align-items: center;
+}
+
+.headings{
+    color:#3F72AF;
+    padding-left:1vw;
+}
+
+body{
+    background-color: #DBE2EF;
+}
+
+.header-items{
+    display:flex;
+    gap:1vw;
+}
+
+.header-element {
+    color: #F9F7F7;
+    margin-bottom: 0px;
+}
+
+.active .header-element{
+    color: #3F72AF;
+    margin-bottom: 0px;
+}
+
+.header-title{
+    color: #F9F7F7;
+    margin-bottom: 0px;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: black;
+    background-color: #F9F7F7;
+}
+
+.profile {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    padding: 0vw 1vw;
+    align-items: center;
+}
+
+.dp {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 100%;
+    opacity: 0; 
+    animation: fade-in 1s ease-in-out forwards;
+}
+
+.aboutme {
+    color: #3F72AF;
+    padding: 5vh;
+    font-size: 2.5vw;
+    opacity: 0; 
+    animation: fade-in 1s ease-in-out 0.5s forwards; 
+}
+
+.navs{
+    display:flex;
+    justify-content:space-around;
+    padding:5%;
+}
+
+.navs-link{
+    text-decoration: none;
+}
+
+.navs-item{
+    padding:2% 5%;
+    border:0.25vw solid #3F72AF;
+    border-radius: 100%;
+    text-align: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    opacity: 0; 
+    animation: fade-in 1s ease-in-out 1s forwards; 
+}
+
+.navs-item:hover {
+    background-color: #F8F6F4;
+    color: white; 
+}
+
+.skills-container{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    padding:0% 5%
+}
+
+.skill{
+    display:grid;
+    grid-template-columns:1fr 2fr;
+    padding:1% 10%;
+    align-items: center;
+}
+
+.skills-heading{
+    color:#3F72AF;
+    padding-left: 1%;
+}
+
+.skill-names{
+    color:#1D5B79;
+}
+
+.perc { 
+    align-items: center;
+    border-radius: 15px;
+    background-color: #1D5B79; 
+    align-items: center;
+    animation: percentage-bar-animation 1s ease-in-out;
+    height:3vh;
+}
+
+.skill-level{
+    text-align: center;
+    color: aliceblue;
+    padding-bottom:1px;
+    font-size:2.5vh
+}
+
+@media (orientation: portrait) {
+    .perc{
+        height:1vh
+    }
+    .skill-level{
+        font-size:0.75vh
+    
+    }
+}
+
+
+
+.python{
+    --initial-width: 85%;
+    width: 85%; 
+}
+.java{
+    --initial-width: 70%;
+    width: 70%; 
+}
+.c{
+    --initial-width: 65%;
+    width: 65%;
+}
+.html{
+    --initial-width: 95%;
+    width: 95%;
+}
+.css{
+    --initial-width: 90%;
+    width:90%;
+}
+.js{
+    --initial-width: 80%;
+    width: 80%;
+}
+.node{
+    --initial-width: 80%;
+    width: 80%;
+}
+.ejs{
+    --initial-width: 90%;
+    width: 90%;
+}
+.react{
+    --initial-width: 50%;
+    width:50%
+}
+.mysql{
+    --initial-width: 85%;
+    width: 85%;
+}
+.mongo{
+    --initial-width: 80%;
+    width: 80%;
+}
+.tableau{
+    --initial-width: 75%;
+    width:75%
+}
+.r{
+    --initial-width: 80%;
+    width: 80%;
+}
+.excel{
+    --initial-width: 90%;
+    width: 90%;
+}
+.ml{
+    --initial-width: 80%;
+    width: 80%;
+}
+.dl{
+    --initial-width: 85%;
+    width: 85%;
+}
+.da{
+    --initial-width: 90%;
+    width: 90%; 
+}
+.git{
+    --initial-width: 90%;
+    width: 90%; 
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes percentage-bar-animation {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: var(--initial-width);
+    }
+}
+
+
+@media(max-width:767px){
+    .profile {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        padding: 0vw 1vw;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .dp {
+        width: 50%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 100%;
+        opacity: 0; 
+        animation: fade-in 1s ease-in-out forwards;
+    }
+    
+    .aboutme {
+        color: #3F72AF;
+        padding: 5vh;
+        font-size: 2.5vw;
+        opacity: 0;
+        animation: fade-in 1s ease-in-out 0.5s forwards;
+    }
+
+    .skills-container{
+        display:grid;
+        grid-template-columns: 1fr;
+        padding:0% 10%
+    }
+}
+
+
+/* Additional styles for the "Contact Me" page */
+.contact-info {
+    padding: 2vh;
+    margin: 2vh;
+    border-radius: 15px;
+    background-color: #F9F7F7;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    opacity:0;
+    animation: fade-in 1s ease-in-out 0.001s forwards;
+
+}
+
+.contact-info h2 {
+    font-size: 24px;
+    color: #3F72AF;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #3F72AF;
+}
+
+.contact-form {
+    padding: 2vh;
+    margin: 2vh;
+    border-radius: 15px;
+    background-color: #F9F7F7;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    opacity:0;
+    animation: fade-in 1s ease-in-out 0.75s forwards;
+}
+
+.contact-form h2 {
+    font-size: 24px;
+    color: #3F72AF;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    height: 150px; /* Adjust the height as needed */
+}
+
+.contact-form button {
+    background-color: #3F72AF;
+    color: #F9F7F7;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #71C9CE;
+}
+
+.footer-container {
+    display:flex;
+
+    justify-content: space-around;
+}
+
+.social{
+    padding:2%;
+    border-radius: 100%;
+    border:0.25vw solid #3F72AF;
+    border-radius: 100%;
+    text-align: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    opacity: 0; 
+    animation: fade-in 1s ease-in-out 1s forwards; 
+}
+.social:hover {
+    background-color: #71C9CE;
+    color: white; 
+}
+
+.social a{
+    text-decoration: none;
+}
+
+/* Additional styles for responsiveness */
+@media (max-width: 767px) {
+    .contact-info, .contact-form {
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .contact-form textarea {
+        height: 100px;
+    }
+}
+
+.resume-page{
+    width: 100%;
+}
+
+.project-container{
+    padding: 3vh;
+    margin: 2vh;
+    border-radius: 15px;
+    background-color: #F9F7F7;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display:grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 3fr;
+    animation: fade-in 1s ease-in-out 0.001s forwards;
+}
+
+
+
+.project-image img {
+    width: 100%;
+    height: 15.5vh;
+    object-fit: contain;
+}
+
+@media screen and (orientation: landscape) {
+    .project-image img {
+        height: 33vh;
+    }
+}
+
+
+.project-image {
+    grid-area: 1/1/3/2;
+    padding: 2.5%;
+    align-items: center;
+    justify-content: center; 
+    display: flex;
+}
+
+.project-description{
+    grid-area: 2/2/3/4;
+}
+
+.project-title{
+    grid-area: 1/2/2/3;
+    display: flex;
+    align-items: center;
+}
+
+.project-duration {
+    display: flex;
+    grid-area: 1/3/2/4;
+    align-items: center; 
+    justify-content: flex-end; 
+}
+
+.experience-container{
+    padding: 3vh;
+    margin: 2vh;
+    border-radius: 15px;
+    background-color: #F9F7F7;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fade-in 1s ease-in-out 0.001s forwards;
+    display:grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
+}
+
+.experience-title{
+    grid-area: 1/1/2/2;
+    display: flex;
+    align-items: center;
+    padding: 1%;
+}
+
+.experience-description{
+    grid-area: 2/1/3/3;
+    padding: 0 1%;
+}
+
+.experience-duration{
+    grid-area: 1/2/2/3;
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1%;
+}
+
+.scroll-target {
+    padding-top: 80px; 
+}
